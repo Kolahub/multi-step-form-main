@@ -1,0 +1,73 @@
+.aside {
+    margin-top: 2rem;
+    // margin-right: 2rem;
+    &__step--one {
+
+        &__heading {
+            color: $color-blue-dark;
+        }
+        
+        p {
+            margin-top: .4rem;
+            color: $color-grey-light;
+            font-size: .65rem;
+            font-weight: 600;
+        }
+
+        &__form {
+            margin-top: 2rem;
+        }
+        &__L {
+            display: inline-block;
+            font-weight: 600;
+            color: $color-blue-dark;  
+            width: 10rem;
+        }
+        &__required {
+            color: red !important;
+            display: inline-block;
+            margin-left: 6rem;
+        }
+        &__I {
+            display: block;
+            margin-bottom: 2rem;
+            margin-top: 5px;
+            width: 100%;
+            height: 2.5rem;
+            padding: .5rem;
+            border: 1px solid $color-grey-light;
+            border-radius: .4rem;
+
+            &::placeholder {
+                font-weight: 600;
+                color: $color-grey-light;
+            }
+
+            &:focus {
+                outline: none;
+
+                &:invalid {
+                    border: 1px solid red;
+                }
+            }
+        }
+
+        &__nextBox {
+            position: absolute;
+            right: 6.5rem;
+        }
+
+        &__next {
+            border: none;
+            padding: .5rem 1rem;
+            border-radius: .3rem;
+            color: $color-white;
+            background-color: $color-blue-dark;
+            cursor: pointer;
+        }
+}
+}
+
+.hidden {
+    display: none;
+}

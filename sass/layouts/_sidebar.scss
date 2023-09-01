@@ -1,0 +1,57 @@
+.sidebar {
+    margin-right: 4rem;
+    &__start {
+        position: relative;
+        &-img {
+            height: 30rem;
+        }
+        &-content {
+            display: flex;
+            position: absolute;
+            top: 2.5rem;
+            left: 2rem;
+
+            &__left {
+                margin-right: 1.5rem;
+                
+            }
+            &__num{
+                border: 1px solid $color-white;
+                height: 2rem;
+                width: 2rem;
+                text-align: center;
+                border-radius: 50%;
+                line-height: 1.8rem;
+                color: $color-white;
+                font-weight: 700;
+                font-size: .8rem;
+                cursor: pointer;
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+            &__numH {
+                border: 1px solid $color-blue-light;
+                background-color: $color-blue-light;
+                color: $color-blue;
+            }
+            &__text {
+                font-weight: 600;
+                font-size: .8rem;
+                color: $color-white;
+                text-transform: uppercase;
+                &:not(:last-child) {
+                    margin-bottom: 2.7rem;
+                }
+            }
+            span {
+                display: block;
+                text-transform: uppercase;
+                color: $color-white;
+                font-size: .5rem;
+                font-weight: 100;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Multi-step form</title>
+
+</head>
+<body>
+
+  <main>
+    <div class="container">
+      <div class="sidebar">
+        <div class="sidebar__start">
+          <img src="images/bg-sidebar-desktop.svg" alt="sidebar picture" class="sidebar__start-img">
+          <div class="sidebar__start-content">
+            <div class="sidebar__start-content__left">
+            <div class="sidebar__start-content__num sidebar__start-content__one">1</div>
+            <div class="sidebar__start-content__num sidebar__start-content__two">2</div>
+            <div class="sidebar__start-content__num sidebar__start-content__three">3</div>
+            <div class="sidebar__start-content__num sidebar__start-content__four">4</div>
+            </div>
+
+            <div class="sidebar__start-content__right">
+              <div class="sidebar__start-content__text"><span>Step 1</span>Your info</div>
+              <div class="sidebar__start-content__text"><span> Step 2</span>Select plan</div>
+              <div class="sidebar__start-content__text"><span>Step 3</span>Add-ons</div>
+              <div class="sidebar__start-content__text"><span>Step 4</span>Summary</div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="aside">
+          <div class="aside__step--one hidden">
+            <h2 class="aside__step--one__heading">Personal info</h2>
+          <p> Please provide your name, email address, and phone number.</p>
+
+          <form action="#" class="aside__step--one__form">
+            <label for="name" class="aside__step--one__L label__text">Name</label>
+            <p class="aside__step--one__required hidden">this field is required</p>
+            <input type="text" class="aside__step--one__I input__log" placeholder="e.g. Stephen King">
+
+            <label for="name" class="aside__step--one__L label__text">Email Address</label>
+              <p class="aside__step--one__required hidden">this field is required</p>
+            <input type="email" class="aside__step--one__I input__log"  placeholder="e.g. stephenking@lorem.com">
+
+            <label for="name" class="aside__step--one__L label__text">Phone Number</label>
+            <p class="aside__step--one__required hidden">this field is required</p>
+            <input type="tel" class="aside__step--one__I input__log" placeholder="e.g. +1 234 567 890">
+          </form>
+
+          <div class="aside__step--one__nextBox">
+            <button class="aside__step--one__next">Next Step</button>
+          </div>
+          </div>
+
+          <div class="aside__step--two">
+            <h2 class="aside__step--two__heading">Select your Plan</h2>
+          <p> You have the option of monthly or yearly billing.</p>
+
+          
+
+          <div class="aside__step--one__nextBox">
+            <button class="aside__step--one__next">Next Step</button>
+          </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Faheez Adekola</a>.
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
