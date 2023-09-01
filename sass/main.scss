@@ -4,8 +4,11 @@
 @import 'base/base';
 @import 'base/typography';
 
+@import 'components/toggle';
+
 @import "layouts/footer";
-@import "layouts/sidebar";
 @import "layouts/aside";
+@import "layouts/grids";
+@import "layouts/sidebar";
 
 @import 'pages/home';
