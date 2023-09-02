@@ -13,3 +13,19 @@ p {
     color: $color-blue-dark;
     font-size: 1rem;
 }
+
+.line {
+    height: 1.2px;
+    width: 100%;
+    background-color: rgba($color-grey-light, .4rem);
+}
+
+.num {
+    background-color: #83dcf7;
+    color: $color-blue-dark;
+    border: 1px solid #83dcf7 !important;
+}
+
+.light-blue-bg {
+    background-color: rgba($color-blue-light, .3);
+}

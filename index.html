@@ -35,26 +35,26 @@
         </div>
 
         <div class="aside">
-          <div class="aside__step--one hidden">
+          <div class="aside__step--one">
             <h2 class="heading_sec aside__step--one__heading">Personal info</h2>
           <p> Please provide your name, email address, and phone number.</p>
 
           <form action="#" class="aside__step--one__form">
             <label for="name" class="aside__step--one__L label__text">Name</label>
             <p class="aside__step--one__required hidden">this field is required</p>
-            <input type="text" class="aside__step--one__I input__log" placeholder="e.g. Stephen King">
+            <input type="text" class="aside__step--one__I input__log--name" placeholder="e.g. Stephen King">
 
             <label for="name" class="aside__step--one__L label__text">Email Address</label>
               <p class="aside__step--one__required hidden">this field is required</p>
-            <input type="email" class="aside__step--one__I input__log"  placeholder="e.g. stephenking@lorem.com">
+            <input type="email" class="aside__step--one__I input__log--email"  placeholder="e.g. stephenking@lorem.com">
 
             <label for="name" class="aside__step--one__L label__text">Phone Number</label>
             <p class="aside__step--one__required hidden">this field is required</p>
-            <input type="tel" class="aside__step--one__I input__log" placeholder="e.g. +1 234 567 890">
+            <input type="tel" class="aside__step--one__I input__log--tel" placeholder="e.g. +1 234 567 890">
           </form>
 
-          <div class="aside__step--one__nextBox">
-            <button class="aside__step--one__next">Next Step</button>
+          <div class="aside__step--one__nextBoxPlan">
+            <button class="aside__step--one__nextPlan">Next Step</button>
           </div>
           </div>
 
@@ -63,23 +63,55 @@
           <p> You have the option of monthly or yearly billing.</p>
 
           <div class="grid__plan">
-            <div class="aside__step--two__arcade aside__step--two__con arcade">
-              <img src="images/icon-arcade.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
-              <h3 class="heading__ter">Arcade</h3>
-              <p class="price">$9/mo</p>
-            </div>
+            <input
+                  type="radio"
+                  id="arcade"
+                  class="aside__step--two__radio-input"
+                  placeholder=""
+                  required
+                  name="size"
+                />
+                <label for="arcade" class="aside__step--two__radio-label">
+                  <div class="aside__step--two__arcade aside__step--two__con arcade">
+                    <img src="images/icon-arcade.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
+                    <h3 class="heading__ter">Arcade</h3>
+                    <p class="price price--arcade">$9/mo</p>
+                  </div>
+                </label>
 
-            <div class="aside__step--two__advanced aside__step--two__con advanced">
-              <img src="images/icon-advanced.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
-              <h3 class="heading__ter">Advanced</h3>
-              <p class="price">$12/mo</p>
-            </div>
+            <input
+              type="radio"
+              id="advanced"
+              class="aside__step--two__radio-input"
+              placeholder=""
+              required
+              name="size"
+            />
 
-            <div class="aside__step--two__pro aside__step--two__con pro">
-              <img src="images/icon-pro.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
-              <h3 class="heading__ter">Pro</h3>
-              <p class="price">$15/mo</p>
-            </div>
+            <label for="advanced" class="aside__step--two__radio-label">
+              <div class="aside__step--two__advanced aside__step--two__con advanced">
+                <img src="images/icon-advanced.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
+                <h3 class="heading__ter">Advanced</h3>
+                <p class="price price--advanced">$12/mo</p>
+              </div>
+            </label>
+
+            <input
+              type="radio"
+              id="pro"
+              class="aside__step--two__radio-input"
+              placeholder=""
+              required
+              name="size"
+            />
+
+            <label for="pro" class="aside__step--two__radio-label">
+              <div class="aside__step--two__pro aside__step--two__con pro">
+                <img src="images/icon-pro.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
+                <h3 class="heading__ter">Pro</h3>
+                <p class="price price--pro">$15/mo</p>
+              </div>
+            </label>
           </div>
 
           <div class="toggle">
@@ -94,12 +126,12 @@
             </p>
           </div>
 
-          <div class="aside__step--two__backBox">
-            <a href="#" class="aside__step--two__back">Go back</a>
+          <div class="aside__step--two__backBoxInfo">
+            <a href="#" class="aside__step--two__backInfo">Go back</a>
           </div>
 
-          <div class="aside__step--two__nextBox">
-            <button class="aside__step--two__next">Next Step</button>
+          <div class="aside__step--two__nextBoxAddon">
+            <button class="aside__step--two__nextAddon">Next Step</button>
           </div>
           </div>
 
@@ -127,19 +159,52 @@
             </div>
           </div>
 
-          <div class="aside__step--three__backBox">
-            <a href="#" class="aside__step--three__back">Go back</a>
+          <div class="aside__step--three__backBoxPlan">
+            <a href="#" class="aside__step--three__backPlan">Go back</a>
           </div>
 
-          <div class="aside__step--three__nextBox">
-            <button class="aside__step--three__next">Next Step</button>
+          <div class="aside__step--three__nextBoxSum">
+            <button class="aside__step--three__nextSum">Next Step</button>
           </div>
           </div>
 
-          
+          <div class="aside__step--four hidden">
+            <h2 class="heading_sec aside__step--two__heading">Finishing up</h2>
+          <p>Double-check everything looks OK before confirming.</p>
+
+          <div class="aside__step--four__con">
+            <div class="side__step--four__left" style="padding: .5rem;">
+              <h3>Arcade (monthly)</h3>
+              <a href="#" class="side__step--four__change">Change</a>
+              <p class="aside__step--four__plan">$9/mo</p>
+            </div>
+            <p class="line"></p>
+            <div class="side__step--four__left" style="padding: .5rem;">
+              <p>Online service</p>
+              <p class="aside__step--four__plA">+$1/mo</p>
+              <p>Larger storage</p>
+              <p class="aside__step--four__plB">+$2/mo</p>
+            </div>
+            </div>
+
+            <div class="aside__step--four__total">
+              <p class="">Total <span>(per month)</span></p>
+              <p class="aside__step--four__plC">+$12/mo</p>
+            </div>
+
+            <div class="aside__step--four__backBoxAddon">
+              <a href="#" class="aside__step--four__backAddon">Go back</a>
+            </div>
+
+            <div class="aside__step--four__nextBoxCon">
+              <button class="aside__step--four__nextCon">Confirm</button>
+            </div>
           </div>
-        </div>
-      </div>
+
+          </div>
+          </div>
+
+        
   </main>
 
 

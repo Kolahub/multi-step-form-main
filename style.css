@@ -24,6 +24,19 @@ p {
   color: #0e285c;
   font-size: 1rem; }
 
+.line {
+  height: 1.2px;
+  width: 100%;
+  background-color: rgba(175, 178, 179, 0.4); }
+
+.num {
+  background-color: #83dcf7;
+  color: #0e285c;
+  border: 1px solid #83dcf7 !important; }
+
+.light-blue-bg {
+  background-color: rgba(222, 232, 250, 0.3); }
+
 .toggle {
   width: 100%;
   height: 3rem;
@@ -122,16 +135,18 @@ p {
       outline: none; }
       .aside__step--one__I:focus:invalid {
         border: 1px solid red; }
-  .aside__step--one__nextBox {
+  .aside__step--one__nextBoxPlan {
     position: absolute;
     right: 6.5rem; }
-  .aside__step--one__next {
+  .aside__step--one__nextPlan {
     border: none;
     padding: .5rem 1rem;
     border-radius: .3rem;
     color: #ffffff;
     background-color: #0e285c;
     cursor: pointer; }
+    .aside__step--one__nextPlan:hover, .aside__step--one__nextPlan:active {
+      opacity: .8; }
   .aside__step--two__con {
     display: flex;
     flex-direction: column;
@@ -148,11 +163,16 @@ p {
     width: 2.5rem;
     height: 2.5rem;
     margin-bottom: 2.5rem; }
-  .aside__step--two__backBox {
+  .aside__step--two__radio-input {
+    display: none; }
+  .aside__step--two__radio-input:checked + .aside__step--two__radio-label .aside__step--two__con {
+    border: 1.55px solid #7532f0;
+    background-color: rgba(222, 232, 250, 0.3); }
+  .aside__step--two__backBoxInfo {
     position: absolute;
     left: 18.5rem;
     bottom: 2.5rem; }
-  .aside__step--two__back {
+  .aside__step--two__backInfo {
     border: none;
     padding: .5rem 1rem;
     border-radius: .3rem;
@@ -160,11 +180,11 @@ p {
     text-decoration: none;
     font-weight: 700;
     cursor: pointer; }
-  .aside__step--two__nextBox {
+  .aside__step--two__nextBoxAddon {
     position: absolute;
     right: 2.5rem;
     bottom: 2rem; }
-  .aside__step--two__next {
+  .aside__step--two__nextAddon {
     border: none;
     padding: .5rem 1rem;
     border-radius: .3rem;
@@ -175,7 +195,7 @@ p {
     display: flex;
     flex-direction: row;
     padding: 1rem 1rem 1rem 1.3rem;
-    width: 20rem;
+    width: 25rem;
     height: 3.5rem;
     border-radius: 4px;
     border: 1.5px solid #afb2b3;
@@ -197,13 +217,13 @@ p {
     font-size: .6rem;
     margin: .2rem; }
   .aside__step--three__price {
-    position: fixed;
+    position: absolute;
     right: 6.5rem; }
-  .aside__step--three__backBox {
+  .aside__step--three__backBoxPlan {
     position: absolute;
     left: 18.5rem;
     bottom: 2.5rem; }
-  .aside__step--three__back {
+  .aside__step--three__backPlan {
     border: none;
     padding: .5rem 1rem;
     border-radius: .3rem;
@@ -211,11 +231,78 @@ p {
     text-decoration: none;
     font-weight: 700;
     cursor: pointer; }
-  .aside__step--three__nextBox {
+  .aside__step--three__nextBoxSum {
     position: absolute;
     right: 5.5rem;
     bottom: 2rem; }
-  .aside__step--three__next {
+  .aside__step--three__nextSum {
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    color: #ffffff;
+    background-color: #0e285c;
+    cursor: pointer; }
+  .aside__step--four__plan {
+    display: inline;
+    color: #0e285c;
+    position: absolute;
+    top: .8rem;
+    right: 1rem;
+    font-size: 1rem; }
+  .aside__step--four__plA {
+    display: inline;
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    color: #0e285c; }
+  .aside__step--four__plB {
+    display: inline;
+    position: absolute;
+    top: 7rem;
+    right: 1rem;
+    color: #0e285c; }
+  .aside__step--four__total {
+    margin-top: 2rem;
+    margin-left: 1.5rem; }
+  .aside__step--four__plC {
+    display: inline;
+    position: absolute;
+    bottom: 9.8rem;
+    right: 6.5rem;
+    color: #7532f0;
+    font-size: 1.2rem; }
+  .aside__step--four__con {
+    position: relative;
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 25rem;
+    background-color: rgba(222, 232, 250, 0.35);
+    border-radius: 1rem; }
+  .aside__step--four h3 {
+    color: #0e285c;
+    font-size: 1rem; }
+  .aside__step--four a {
+    font-size: .8rem;
+    color: #7532f0; }
+  .aside__step--four p:not(:first-child) {
+    margin-top: 1rem; }
+  .aside__step--four__backBoxAddon {
+    position: absolute;
+    left: 18.5rem;
+    bottom: 2.5rem; }
+  .aside__step--four__backAddon {
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    color: #afb2b3;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer; }
+  .aside__step--four__nextBoxCon {
+    position: absolute;
+    right: 5.5rem;
+    bottom: 2rem; }
+  .aside__step--four__nextCon {
     border: none;
     padding: .5rem 1rem;
     border-radius: .3rem;
@@ -239,7 +326,7 @@ p {
   margin-top: 3rem; }
 
 .sidebar {
-  margin-right: 4rem; }
+  margin-right: 4.2rem; }
   .sidebar__start {
     position: relative; }
     .sidebar__start-img {
@@ -299,6 +386,6 @@ main {
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   height: 32rem;
-  width: 45rem;
+  width: 50rem;
   border-radius: 1rem;
   padding: 1rem; }
