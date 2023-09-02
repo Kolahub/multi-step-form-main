@@ -4,3 +4,10 @@
     column-gap: 1rem;
     margin-top: 3rem;
 }
+
+.grid__add-on {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1rem;
+    margin-top: 3rem;
+}

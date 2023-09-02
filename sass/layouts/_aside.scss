@@ -112,6 +112,81 @@
             cursor: pointer;
         }
     }
+
+    &__step--three {
+        &__con {
+            display: flex;
+            flex-direction: row;
+            padding: 1rem 1rem 1rem 1.3rem;
+            width: 20rem;
+            height: 3.5rem;
+            border-radius: 4px;
+            border: 1.5px solid $color-grey-light;
+            cursor: pointer;
+
+            &:hover {
+                border: 1.55px solid $color-blue;
+            }
+        }
+
+        input {
+            margin-right: 1rem;
+            accent-color: $color-blue;
+        }
+
+        &__con:has(input:checked) {
+            background-color: rgba($color-blue-light, .3);
+            border: 1.55px solid $color-blue;
+        }
+
+        &__text {
+            color: $color-blue-dark;
+            font-weight: 700;
+            font-size: .8rem;
+        }
+
+        &__subText {
+            font-weight: 700;
+            font-size: .6rem;
+            margin: .2rem;
+        }
+
+        &__price {
+            position: fixed;
+            right: 6.5rem;
+        }
+
+        &__backBox {
+            position: absolute;
+            left: 18.5rem;
+            bottom: 2.5rem;
+        }
+
+        &__back {
+            border: none;
+            padding: .5rem 1rem;
+            border-radius: .3rem;
+            color: $color-grey-light;
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        &__nextBox {
+            position: absolute;
+            right: 5.5rem;
+            bottom: 2rem;
+        }
+
+        &__next {
+            border: none;
+            padding: .5rem 1rem;
+            border-radius: .3rem;
+            color: $color-white;
+            background-color: $color-blue-dark;
+            cursor: pointer;
+        }
+    }
 }
 
 .hidden {
