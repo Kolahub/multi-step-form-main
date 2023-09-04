@@ -4,6 +4,10 @@
         position: relative;
         &-img {
             height: 30rem;
+            
+            @include respond(phone) {
+                display: none;
+            }
         }
         &-content {
             display: flex;
@@ -13,7 +17,20 @@
 
             &__left {
                 margin-right: 1.5rem;
-                
+                @include respond(phone) {
+                    display: flex;
+                    flex-direction: row;
+                    position: absolute;
+                    top: -8rem;
+                    margin-right: 0;
+                    margin-left: 2rem;
+                }
+            }
+            
+            &__right {
+                @include respond(phone) {
+                    display: none;
+                }
             }
             &__num{
                 border: 1px solid $color-white;
@@ -28,6 +45,10 @@
                 cursor: pointer;
                 &:not(:last-child) {
                     margin-bottom: 2rem;
+                }
+
+                @include respond(phone) {
+                    margin-right: 1rem;
                 }
             }
             &__numH {

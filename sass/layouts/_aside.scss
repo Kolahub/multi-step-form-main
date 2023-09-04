@@ -1,6 +1,53 @@
 .aside {
     margin-top: 2rem;
     // margin-right: 2rem;
+
+    @include respond(phone) { 
+        margin-top: .5rem;
+    }
+    &__footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3rem;
+        
+        @include respond(phone) {
+            margin-top: 6rem;
+        }
+    }
+    &__back {
+        border: none;
+        padding: .5rem 1rem;
+        border-radius: .3rem;
+        color: $color-blue-dark;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+
+        @include respond(phone) { 
+        
+        }
+    }
+
+    &__next {
+        border: none;
+        padding: .5rem 1rem;
+        border-radius: .3rem;
+        color: $color-white;
+        background-color: $color-blue-dark;
+        cursor: pointer;
+
+        @include respond(phone) { 
+            
+        }
+
+        &:hover,
+        &:active {
+                opacity: .8;
+            }
+    }
+
     &__step--one {
         
         &__form {
@@ -41,27 +88,16 @@
             }
         }
 
-        &__nextBoxPlan {
-            position: absolute;
-            right: 6.5rem;
-        }
-
         &__nextPlan {
-            border: none;
-            padding: .5rem 1rem;
-            border-radius: .3rem;
-            color: $color-white;
-            background-color: $color-blue-dark;
-            cursor: pointer;
 
-            &:hover,
-            &:active {
-                opacity: .8;
-            }
+            
         }
     }
 
     &__step--two {
+        @include respond(phone) { 
+            height: 25rem;
+        }
 
         &__con {
             display: flex;
@@ -77,12 +113,23 @@
                 border: 1.55px solid $color-blue;
                 transform: translateY(-6px) scale(1.1);
             } 
+
+            @include respond (phone) {
+                width: 100%;
+                height: 5rem;
+                display: flex;
+                flex-direction: row;
+            }
         }
 
         &__pic {
             width: 2.5rem;
             height: 2.5rem;
             margin-bottom: 2.5rem;
+
+            @include respond (phone) {
+                margin-right: 1.5rem;
+            }
         }
 
         &__radio-input {
@@ -93,39 +140,22 @@
             border: 1.55px solid $color-blue;
             background-color: rgba($color-blue-light, .3);
         }
-        &__backBoxInfo {
-            position: absolute;
-            left: 18.5rem;
-            bottom: 2.5rem;
+
+        &__text {
+            
+            @include respond (phone) {
+                display: flex;
+                flex-direction: column;
+            }
         }
 
-        &__backInfo {
-            border: none;
-            padding: .5rem 1rem;
-            border-radius: .3rem;
-            color: $color-blue-dark;
-            text-decoration: none;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        &__nextBoxAddon {
-            position: absolute;
-            right: 7.5rem;
-            bottom: 2rem;
-        }
-
-        &__nextAddon {
-            border: none;
-            padding: .5rem 1rem;
-            border-radius: .3rem;
-            color: $color-white;
-            background-color: $color-blue-dark;
-            cursor: pointer;
-        }
     }
 
     &__step--three {
+        @include respond(phone) { 
+            height: 20rem;
+        }
+
         &__con {
             display: flex;
             flex-direction: row;
@@ -138,6 +168,11 @@
 
             &:hover {
                 border: 1.55px solid $color-blue;
+            }
+
+            @include respond (phone) {
+                width: 100%;
+                height: 4rem;
             }
         }
 
@@ -168,41 +203,22 @@
             right: 6.5rem;
             color: $color-blue;
             font-weight: 300;
-        }
 
-        &__backBoxPlan {
-            position: absolute;
-            left: 18.5rem;
-            bottom: 2.5rem;
+            @include respond(phone) {
+                right: 2rem ;
+            }
         }
 
         &__backPlan {
-            border: none;
-            padding: .5rem 1rem;
-            border-radius: .3rem;
             color: $color-grey-light;
-            text-decoration: none;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        &__nextBoxSum {
-            position: absolute;
-            right: 5.5rem;
-            bottom: 2rem;
-        }
-
-        &__nextSum {
-            border: none;
-            padding: .5rem 1rem;
-            border-radius: .3rem;
-            color: $color-white;
-            background-color: $color-blue-dark;
-            cursor: pointer;
         }
     }
 
     &__step--four { 
+        @include respond(phone) { 
+            height: 15rem;
+        }
+
         &__con {
             position: relative;
             padding: 1rem;
@@ -211,6 +227,11 @@
             height: 100%;
             background-color: rgba($color-grey-light, .1);
             border-radius: 1rem;
+
+             @include respond(phone) { 
+            width: 100%;
+            height: auto;
+        }
         }
 
         &__top{
@@ -262,47 +283,30 @@
             }
         }
 
-        &__backBoxAddon {
-            position: absolute;
-            left: 18.5rem;
-            bottom: 2.5rem;
-        }
 
         &__backAddon {
-            border: none;
-            padding: .5rem 1rem;
-            border-radius: .3rem;
-            color: $color-grey-light;
-            text-decoration: none;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        &__nextBoxCon {
-            position: absolute;
-            right: 5.5rem;
-            bottom: 2rem;
-        }
-
-        &__nextCon {
-            border: none;
-            padding: .5rem 1rem;
-            border-radius: .3rem;
-            color: $color-white;
-            background-color: $color-blue-dark;
-            cursor: pointer;
-        }
-            
+            color: $color-grey-light !important;
+            font-size: 1.2rem !important;
+        }     
         
     }
 
     &__completed {
-        display: flex;
+        &__con {
+            display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: middle;
         @include center;
         left: 65%;
+
+        @include respond(phone) { 
+            left: 50%;
+        }
+        }
+        @include respond(phone) { 
+            height: 20rem;
+        }
 
         &--pic {
             margin-bottom: 1rem;
@@ -312,6 +316,10 @@
             width: 25rem;
             text-align: center;
             margin-top: .4rem;
+
+            @include respond(phone) { 
+                width: 18rem;
+            }
         }
         h3 {
             font-family: 'Roboto', sans-serif;

@@ -5,10 +5,24 @@
 }
 .html {
     font-size: 62.5%;
-}
+
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1rem = 9px; 9px/16px = 50%
+    }
+    @include respond(tab-port) {
+        font-size: 50%; // 1rem = 8px
+    }
+    }
 
 body {
     box-sizing: border-box;
-    background-color: $color-grey-light;
+    background-color: rgba($color-blue-light, 0.3);
     font-family: 'Roboto', sans-serif;
+
+    @include respond (phone) {
+        background-image: url(../images/bg-sidebar-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -100;
+    }
 }

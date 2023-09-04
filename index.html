@@ -38,7 +38,7 @@
         </div>
 
         <div class="aside">
-          <div class="aside__step--one">
+          <div class="aside__step--one hidden">
             <h2 class="heading_sec aside__step--one__heading">Personal info</h2>
           <p> Please provide your name, email address, and phone number.</p>
 
@@ -55,13 +55,17 @@
             <p class="aside__step--one__required hidden">this field is required</p>
             <input type="tel" class="aside__step--one__I input__log--tel" placeholder="e.g. +1 234 567 890">
           </form>
-
-          <div class="aside__step--one__nextBoxPlan">
-            <button class="aside__step--one__nextPlan">Next Step</button>
+            <div class="aside__footer">
+              <div class="aside__back">
+                &nbsp;
+              </div>
+              <div class="aside__step--one__nextBoxPlan">
+                <button class="aside__step--one__nextPlan aside__next aside__next">Next Step</button>
+              </div>
+            </div>
           </div>
-          </div>
 
-          <div class="aside__step--two hidden">
+          <div class="aside__step--two">
             <h2 class="heading_sec aside__step--two__heading">Select your Plan</h2>
           <p> You have the option of monthly or yearly billing.</p>
 
@@ -77,11 +81,20 @@
                 <label for="arcade" class="aside__step--two__radio-label">
                   <div class="aside__step--two__arcade aside__step--two__con arcade">
                     <img src="images/icon-arcade.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
-                    <h3 class="heading__ter">Arcade</h3>
-                    <p class="price price--arcade">$9/mo</p>
-                    <div class="yearly--price hidden">
-                      <p class="price--arcade">$90/yr</p>
-                      <h6 class="heading__bottom">2 months free</h6>
+
+                    <div class="aside__step--two__text">
+                      <div class="">
+                        <h3 class="heading__ter">Arcade</h3>
+                      </div>
+
+                      <div class="">
+                        <p class="price price--arcade">$9/mo</p>
+                      </div>
+
+                      <div class="yearly--price hidden">
+                        <p class="price--arcade">$90/yr</p>
+                        <h6 class="heading__bottom">2 months free</h6>
+                      </div>
                     </div>
                   </div>
                 </label>
@@ -98,11 +111,19 @@
             <label for="advanced" class="aside__step--two__radio-label">
               <div class="aside__step--two__advanced aside__step--two__con advanced">
                 <img src="images/icon-advanced.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
-                <h3 class="heading__ter">Advanced</h3>
-                <p class="price price--advanced">$12/mo</p>
-                <div class="yearly--price hidden">
-                  <p class="price--advanced">$120/yr</p>
-                  <h6 class="heading__bottom">2 months free</h6>
+                <div class="aside__step--two__text">
+                  <div class="">
+                    <h3 class="heading__ter">Advanced</h3>
+                  </div>
+
+                  <div class="">
+                    <p class="price price--advanced">$12/mo</p>
+                  </div>
+
+                  <div class="yearly--price hidden">
+                    <p class="price--advanced">$120/yr</p>
+                    <h6 class="heading__bottom">2 months free</h6>
+                  </div>
                 </div>
               </div>
             </label>
@@ -119,11 +140,20 @@
             <label for="pro" class="aside__step--two__radio-label">
               <div class="aside__step--two__pro aside__step--two__con pro">
                 <img src="images/icon-pro.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
-                <h3 class="heading__ter">Pro</h3>
-                <p class="price price--pro">$15/mo</p>
-                <div class="yearly--price hidden">
-                  <p class="price--pro">$150/yr</p>
-                  <h6 class="heading__bottom">2 months free</h6>
+
+                <div class="aside__step--two__text">
+                  <div class="aside__step--two__h3">
+                    <h3 class="heading__ter">Pro</h3>
+                  </div>
+
+                  <div class="">
+                    <p class="price price--pro">$15/mo</p>
+                  </div>
+
+                  <div class="yearly--price hidden">
+                    <p class="price--pro">$150/yr</p>
+                    <h6 class="heading__bottom">2 months free</h6>
+                  </div>
                 </div>
               </div>
             </label>
@@ -140,12 +170,13 @@
             </p>
           </div>
 
-          <div class="aside__step--two__backBoxInfo">
-            <a href="#" class="aside__step--two__backInfo">Go back</a>
-          </div>
-
-          <div class="aside__step--two__nextBoxAddon">
-            <button class="aside__step--two__nextAddon">Next Step</button>
+          <div class="aside__footer">
+            <div class="aside__step--two__backBoxInfo">
+              <a href="#" class="aside__step--two__backInfo aside__back">Go back</a>
+            </div>
+            <div class="aside__step--two__nextBoxAddon">
+              <button class="aside__step--two__nextAddon aside__next">Next Step</button>
+            </div>
           </div>
           </div>
 
@@ -176,12 +207,14 @@
             </div>
           </div>
 
-          <div class="aside__step--three__backBoxPlan">
-            <a href="#" class="aside__step--three__backPlan">Go back</a>
-          </div>
-
-          <div class="aside__step--three__nextBoxSum">
-            <button class="aside__step--three__nextSum">Next Step</button>
+          <div class="aside__footer">
+            <div class="aside__step--three__backBoxPlan">
+              <a href="#" class="aside__step--three__backPlan aside__back">Go back</a>
+            </div>
+  
+            <div class="aside__step--three__nextBoxSum">
+              <button class="aside__step--three__nextSum aside__next">Next Step</button>
+            </div>
           </div>
           </div>
 
@@ -240,24 +273,28 @@
               </div>
             </div>
 
-            <div class="aside__step--four__backBoxAddon">
-              <a href="#" class="aside__step--four__backAddon">Go back</a>
-            </div>
-
-            <div class="aside__step--four__nextBoxCon">
-              <button class="aside__step--four__nextCon">Confirm</button>
+            <div class="aside__footer">
+              <div class="aside__step--four__backBoxAddon">
+                <a href="#" class="aside__step--four__backAddon aside__back">Go back</a>
+              </div>
+  
+              <div class="aside__step--four__nextBoxCon">
+                <button class="aside__step--four__nextCon aside__next">Confirm</button>
+              </div>
             </div>
           </div>
 
           <div class="aside__completed completed hidden">
-            <div class="aside__completed--picBox">
-            <img src="images/icon-thank-you.svg" alt="" class="aside__completed--pic">
-            </div>
-            <div class="aside__completed--heading">
-              <h3 class="heading_sec">Thank you!</h3>
-            </div>
-            <div class="aside__completed--text">
-              <p>Thanks for confirming your subcribtion! we hope you have fun using our platform. if you ever need support, please feel free to email us at support@foremgaming.com .</p>
+            <div class="aside__completed__con">
+              <div class="aside__completed--picBox">
+                <img src="images/icon-thank-you.svg" alt="" class="aside__completed--pic">
+                </div>
+                <div class="aside__completed--heading">
+                  <h3 class="heading_sec">Thank you!</h3>
+                </div>
+                <div class="aside__completed--text">
+                  <p>Thanks for confirming your subcribtion! we hope you have fun using our platform. if you ever need support, please feel free to email us at support@foremgaming.com .</p>
+                </div>
             </div>
           </div>
           </div>
