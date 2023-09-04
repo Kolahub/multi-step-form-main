@@ -14,6 +14,11 @@ p {
     font-size: 1rem;
 }
 
+.heading__bottom {
+    color: $color-blue-dark;
+    font-size: .7rem;
+    margin-top: .4rem;
+}
 .line {
     height: 1.2px;
     width: 100%;
@@ -22,10 +27,10 @@ p {
 
 .num {
     background-color: #83dcf7;
-    color: $color-blue-dark;
+    color: hsl(213, 96%, 18%) !important;
     border: 1px solid #83dcf7 !important;
 }
 
 .light-blue-bg {
-    background-color: rgba($color-blue-light, .3);
+    background-color: hsl(228, 100%, 84%);
 }

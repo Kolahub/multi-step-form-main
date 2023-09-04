@@ -6,6 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
   <title>Multi-step form</title>
 
 </head>
@@ -76,6 +79,10 @@
                     <img src="images/icon-arcade.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
                     <h3 class="heading__ter">Arcade</h3>
                     <p class="price price--arcade">$9/mo</p>
+                    <div class="yearly--price hidden">
+                      <p class="price--arcade">$90/yr</p>
+                      <h6 class="heading__bottom">2 months free</h6>
+                    </div>
                   </div>
                 </label>
 
@@ -93,6 +100,10 @@
                 <img src="images/icon-advanced.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
                 <h3 class="heading__ter">Advanced</h3>
                 <p class="price price--advanced">$12/mo</p>
+                <div class="yearly--price hidden">
+                  <p class="price--advanced">$120/yr</p>
+                  <h6 class="heading__bottom">2 months free</h6>
+                </div>
               </div>
             </label>
 
@@ -110,6 +121,10 @@
                 <img src="images/icon-pro.svg" alt="arcade" class="aside__step--two__pic arcade__pic">
                 <h3 class="heading__ter">Pro</h3>
                 <p class="price price--pro">$15/mo</p>
+                <div class="yearly--price hidden">
+                  <p class="price--pro">$150/yr</p>
+                  <h6 class="heading__bottom">2 months free</h6>
+                </div>
               </div>
             </label>
           </div>
@@ -119,10 +134,9 @@
               <span class="toggle__text--monthly">monthly</span>
               <label class="toggle__text--switch">
                 <input type="checkbox">
-                <span class="toggle__text--slider"></span>
+                <span class="toggle__text--slider toggle__btn"></span>
               </label>
               <span class="toggle__text--yearly">Yearly</span>
-              
             </p>
           </div>
 
@@ -140,22 +154,25 @@
           <p>Add-ons help enchance your gaming experience.</p>
 
           <div class="grid__add-on">
-            <div class="aside__step--three__service aside__step--three__con service">
-              <input type="checkbox" class="aside__step--three__checkbox">
+            <div class="aside__step--three__service aside__step--three__con">
+              <input type="checkbox" id="name" class="aside__step--three__checkbox service">
               <label for="name" class="aside__step--three__text">Online service <p class="aside__step--three__subText">Access to multiplayer games</p></label>
-              <p class="aside__step--three__price">+$1/mo</p>
+              <p class="aside__step--three__price addon__monthly--price">+$1/mo</p>
+              <p class="aside__step--three__price addon__yearly--price hidden">+10/yr</p>
             </div>
 
-            <div class="aside__step--three__storage aside__step--three__con storage">
-              <input type="checkbox" class="aside__step--three__checkbox">
-              <label for="name" class="aside__step--three__text">Larger storage <p class="aside__step--three__subText">Extra 1TB of cloud save</p></label>
-              <p class="aside__step--three__price">+$2/mo</p>
+            <div class="aside__step--three__storage aside__step--three__con">
+              <input type="checkbox" class="aside__step--three__checkbox storage">
+              <label for="name" id="name" class="aside__step--three__text">Larger storage <p class="aside__step--three__subText">Extra 1TB of cloud save</p></label>
+              <p class="aside__step--three__price addon__monthly--price">+$2/mo</p>
+              <p class="aside__step--three__price addon__yearly--price hidden">+20/yr</p>
             </div>
 
-            <div class="aside__step--three__profile aside__step--three__con profile">
-              <input type="checkbox" class="aside__step--three__checkbox">
+            <div class="aside__step--three__profile aside__step--three__con">
+              <input type="checkbox" id="name" class="aside__step--three__checkbox profile">
               <label for="name" class="aside__step--three__text">Customizable profile <p class="aside__step--three__subText">Custom theme on your profile</p></label>
-              <p class="aside__step--three__price">+$2/mo</p>
+              <p class="aside__step--three__price addon__monthly--price">+$2/mo</p>
+              <p class="aside__step--three__price addon__yearly--price hidden">+20/yr</p>
             </div>
           </div>
 
@@ -173,23 +190,54 @@
           <p>Double-check everything looks OK before confirming.</p>
 
           <div class="aside__step--four__con">
-            <div class="side__step--four__left" style="padding: .5rem;">
-              <h3>Arcade (monthly)</h3>
-              <a href="#" class="side__step--four__change">Change</a>
-              <p class="aside__step--four__plan">$9/mo</p>
+            <div class="aside__step--four__top">
+              <div class="">
+                <h3 class="plan__choice">Arcade (monthly)</h3>
+                <a href="#" class="side__step--four__change change">Change</a>
+              </div>
+
+              <div class="">
+                <p class="aside__step--four__top--price plan__price">$<span class="num1">0</span>/<span class="choiceDate">mo</span></p>
+              </div>
             </div>
             <p class="line"></p>
-            <div class="side__step--four__left" style="padding: .5rem;">
-              <p>Online service</p>
-              <p class="aside__step--four__plA">+$1/mo</p>
-              <p>Larger storage</p>
-              <p class="aside__step--four__plB">+$2/mo</p>
+              <div class="aside__step--four__choice service--choice hidden">
+                <div class="">
+                  <p class="">Online service</p>
+                </div>
+
+                <div class="">
+                  <p class="aside__step--four__pl">+$<span class="num2">0</span>/<span class="choiceDate">mo</span></p>
+                </div>
+              </div>
+
+              <div class="aside__step--four__choice storage--choice hidden">
+                <div class="">
+                  <p>Larger storage</p>
+                </div>
+                <div class="">
+                  <p class="aside__step--four__pl">+$<span class="num3">0</span>/<span class="choiceDate">mo</span></p>
+                </div>
+              </div>
+              
+              <div class="aside__step--four__choice profile--choice hidden">
+                <div class="">
+                <p class="">Customizable Profile</p>
+              </div>
+
+              <div class="">
+                <p class="aside__step--four__pl profile--choice">+$<span class="num4">0</span>/<span class="choiceDate">mo</span></p>
+              </div>
             </div>
             </div>
 
             <div class="aside__step--four__total">
-              <p class="">Total <span>(per month)</span></p>
-              <p class="aside__step--four__plC">+$12/mo</p>
+              <div class="">
+                <p class="">Total <span class="totalDate">(per month)</span></p>
+              </div>
+              <div class="">
+                <p class="aside__step--four__plD">+$<span class="sum">0</span>/<span class="choiceDate">mo</span></p>
+              </div>
             </div>
 
             <div class="aside__step--four__backBoxAddon">
@@ -201,6 +249,17 @@
             </div>
           </div>
 
+          <div class="aside__completed completed hidden">
+            <div class="aside__completed--picBox">
+            <img src="images/icon-thank-you.svg" alt="" class="aside__completed--pic">
+            </div>
+            <div class="aside__completed--heading">
+              <h3 class="heading_sec">Thank you!</h3>
+            </div>
+            <div class="aside__completed--text">
+              <p>Thanks for confirming your subcribtion! we hope you have fun using our platform. if you ever need support, please feel free to email us at support@foremgaming.com .</p>
+            </div>
+          </div>
           </div>
           </div>
 
