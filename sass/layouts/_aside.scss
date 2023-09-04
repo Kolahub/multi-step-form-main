@@ -49,7 +49,9 @@
     }
 
     &__step--one {
-        
+        @include respond(phone) { 
+            height: 23rem;
+        }
         &__form {
             margin-top: 2rem;
         }
@@ -228,7 +230,7 @@
             background-color: rgba($color-grey-light, .1);
             border-radius: 1rem;
 
-             @include respond(phone) { 
+        @include respond(phone) { 
             width: 100%;
             height: auto;
         }
