@@ -21,7 +21,6 @@ const InputName = document.querySelector('.input__log--name')
 const InputEmail = document.querySelector('.input__log--email')
 const InputTel = document.querySelector('.input__log--tel')
 
-
 const arcade = document.querySelector('.arcade')
 const advanced = document.querySelector('.advanced')
 const pro = document.querySelector('.pro')
@@ -41,19 +40,61 @@ const price = document.querySelectorAll('.price')
 
 const AddonYearlyPrice = document.querySelectorAll('.addon__yearly--price') 
 const AddonMonthlyPrice = document.querySelectorAll('.addon__monthly--price') 
+const choiceDate = document.querySelectorAll('.choiceDate')
 
+// ****** selecting the values from each value in the final step (step 4) 
 let num1 = document.querySelector('.num1')
 let num2 = document.querySelector('.num2')
 let num3 = document.querySelector('.num3')
 let num4 = document.querySelector('.num4')
 let sum = document.querySelector('.sum')
 
-const choiceDate = document.querySelectorAll('.choiceDate')
-
-
 console.log(sum)
 
 
+// ******* This function when called select values of the choice picked then add the values (amount) to the final section with the name  
+const addonSec = function (x, y) {
+    service.addEventListener('click', function () {
+        if (this.checked) {
+            serviceChoice.classList.remove('hidden')
+            num2.textContent = x
+            console.log (num2.textContent)
+        } else {
+            serviceChoice.classList.add('hidden')
+            num2.textContent = "0"
+            console.log (num2.textContent)
+        }
+    })
+    
+    storage.addEventListener('click', function () {
+        if (this.checked) {
+            storageChoice.classList.remove('hidden')
+            num3.textContent = y
+            console.log (num3.textContent)
+        } else {
+            storageChoice.classList.add('hidden')
+            num3.textContent = '0'
+            console.log (num3.textContent)
+        }
+        
+    })
+    
+    profile.addEventListener('click', function () {
+        if (this.checked) {
+            profileChoice.classList.remove('hidden')
+            num4.textContent = y
+            console.log (num4.textContent)
+        } else {
+            profileChoice.classList.add('hidden')
+            num4.textContent = '0'
+            console.log (num4.textContent)
+        }
+    })
+}
+
+addonSec('1', '2')
+
+// **** This function when called either shows monthly payment method or yearly payment method. whatever payment medthod the user pick is add to the final step (step 4) and every other payment method will be in year (per year or /yr)
 const toggleFunc = function () {
     for (i = 0; i < yearlyPrice.length; i++) {
         var x = yearlyPrice[i]
@@ -72,10 +113,6 @@ const toggleFunc = function () {
             document.querySelector('.price--arcade').textContent = '$9/mo'
             document.querySelector('.price--advanced').textContent = '$12/mo'
             document.querySelector('.price--pro').textContent = '$15/mo'
-
-                num2.textContent = "1"
-                num3.textContent = '2'
-                num4.textContent = '2'
 
                 for (m = 0; m < choiceDate.length; m++) {
                     choiceDate[m].textContent = 'mo'
@@ -101,10 +138,7 @@ const toggleFunc = function () {
             document.querySelector('.price--advanced').textContent = '$120/yr'
             document.querySelector('.price--pro').textContent = '$150/yr'
 
-
-            num2.textContent = "10"
-            num3.textContent = '20'
-            num4.textContent = '20'
+            addonSec('10', '20')
 
             for (m = 0; m < choiceDate.length; m++) {
                 choiceDate[m].textContent = 'yr'
@@ -119,7 +153,6 @@ const toggleFunc = function () {
     
     
 }
-
 
 stepOne.classList.add('num')
 
@@ -262,43 +295,3 @@ pro.addEventListener('click', function () {
     }
     console.log (num1.textContent)
 })
-
-service.addEventListener('click', function () {
-    if (this.checked) {
-        serviceChoice.classList.remove('hidden')
-        num2.textContent = "1"
-        console.log (num2.textContent)
-    } else {
-        serviceChoice.classList.add('hidden')
-        num2.textContent = "0"
-        console.log (num2.textContent)
-    }
-})
-
-storage.addEventListener('click', function () {
-    if (this.checked) {
-        storageChoice.classList.remove('hidden')
-        num3.textContent = '2'
-        console.log (num3.textContent)
-    } else {
-        storageChoice.classList.add('hidden')
-        num3.textContent = '0'
-        console.log (num3.textContent)
-    }
-    
-})
-
-profile.addEventListener('click', function () {
-    if (this.checked) {
-        profileChoice.classList.remove('hidden')
-        num4.textContent = '2'
-        console.log (num4.textContent)
-    } else {
-        profileChoice.classList.add('hidden')
-        num4.textContent = '0'
-        console.log (num4.textContent)
-    }
-})
-
-
-
