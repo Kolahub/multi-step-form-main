@@ -18,7 +18,7 @@ body {
   font-family: 'Roboto', sans-serif; }
   @media only screen and (max-width: 28.125em) {
     body {
-      background-image: url(../images/bg-sidebar-mobile.svg);
+      background-image: url(https://kolahub.github.io/multi-step-form-main/images/bg-sidebar-mobile.svg);
       background-repeat: no-repeat;
       background-size: cover; } }
 
@@ -190,6 +190,7 @@ p {
     display: block;
     margin-top: 5px;
     width: 100%;
+    font-size: 16px;
     height: 2.5rem;
     padding: .5rem;
     border: 1px solid #d6d9e6;
