@@ -10,10 +10,18 @@
     border-radius: 1rem;
     padding: 1rem;
 
+    @include respond(tab-port) { 
+        width: 36rem;
+    }
+
+    @include respond(phone-land) { 
+        width: 30rem;
+    }
+
     @include respond (phone) {
         display: block;
         width: 22rem;
-        top: 45%;
+        top: 19rem;
         left: 50%;
         transform: translate(-50%, -50%);
     }

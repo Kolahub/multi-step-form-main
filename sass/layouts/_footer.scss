@@ -7,7 +7,4 @@
     transform: translate(-50%, -50%);
     & a { color: hsl(222, 86%, 54%); }
 
-    @include respond(phone) {
-        display: none;
-    }
 }

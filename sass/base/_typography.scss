@@ -3,6 +3,12 @@ p {
     color: $color-grey-light;
     font-size: .8rem;
     font-weight: 600;
+    @include respond(tab-port) { 
+        font-size: .6rem;
+    }
+    @include respond(phone) { 
+        font-size: .8rem;
+    }
 }
 
 .heading_sec {
@@ -12,6 +18,15 @@ p {
 .heading__ter {
     color: $color-blue-dark;
     font-size: 1rem;
+    @include respond(tab-port) {
+        font-size: .8rem;
+    }
+    @include respond(phone-land) { 
+        font-size: .6rem;
+    }
+    @include respond(phone) { 
+        font-size: 1rem;
+    }
 }
 
 .heading__bottom {

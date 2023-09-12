@@ -1,10 +1,18 @@
 .sidebar {
     margin-right: 4.2rem;
+    @include respond(tab-port) { 
+        margin-right: 2rem;
+    }
     &__start {
         position: relative;
         &-img {
             height: 30rem;
-            
+            @include respond(tab-port) { 
+                height: 25rem;
+            }
+            @include respond(tab-port) { 
+                height: 22rem;
+            }
             @include respond(phone) {
                 display: none;
             }
@@ -63,6 +71,15 @@
                 text-transform: uppercase;
                 &:not(:last-child) {
                     margin-bottom: 2.7rem;
+                }
+                @include respond(tab-port) { 
+                    font-size: .7rem;
+                }
+                @include respond(phone-land) { 
+                    font-size: .6rem;
+                }
+                @include respond(phone) { 
+                    font-size: .8rem;
                 }
             }
             span {
