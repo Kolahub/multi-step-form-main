@@ -468,9 +468,9 @@ p {
       @media (max-width: 56.25em) {
         .sidebar__start-img {
           height: 25rem; } }
-      @media (max-width: 56.25em) {
+      @media (max-width: 37.5em) {
         .sidebar__start-img {
-          height: 22rem; } }
+          height: 26rem; } }
       @media only screen and (max-width: 31.25em) {
         .sidebar__start-img {
           display: none; } }
