@@ -52,7 +52,7 @@ let sum = document.querySelector('.sum')
 console.log(sum)
 
 
-// ******* This function when called select values of the choice picked then add the values (amount) to the final section with the name  
+// ******* This function is  called when the user select values of the choice picked then add the values (amount) to the final section with the name  
 const addonSec = function (x, y) {
     service.addEventListener('click', function () {
         if (this.checked) {
@@ -113,6 +113,8 @@ const toggleFunc = function () {
             document.querySelector('.price--arcade').textContent = '$9/mo'
             document.querySelector('.price--advanced').textContent = '$12/mo'
             document.querySelector('.price--pro').textContent = '$15/mo'
+
+            addonSec('1', '2')
 
                 for (m = 0; m < choiceDate.length; m++) {
                     choiceDate[m].textContent = 'mo'
@@ -245,10 +247,6 @@ changePlan.addEventListener('click', function () {
 })
 
 confirmBtn.addEventListener('click', function() {
-    // stepOne.classList.remove('num')
-    // stepTwo.classList.remove('num')
-    // stepThree.classList.remove('num')
-    // stepFour.classList.add('num')
     secFour.classList.add('hidden')
     completed.classList.remove('hidden')
 })
